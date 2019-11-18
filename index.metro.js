@@ -1,10 +1,10 @@
 const admin = require('./node_modules/firebase-admin');
 const serviceAccount = require("./serviceAccountKey.json");
-const data = require("./earthyclay_prodlist.json");
-const collectionKey = "items_list"; //name of the collection
+const data = require("./data.json");
+const collectionKey = "ItemsList"; //name of the collection
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://earthyclay-a4f72.firebaseio.com"
+    databaseURL: "https://metro-c7898.firebaseio.com"
 });
 const firestore = admin.firestore();
 const settings = { timestampsInSnapshots: true };
